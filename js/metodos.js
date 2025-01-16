@@ -1,211 +1,286 @@
 const peliculas = [
-    {
-      id: 1,
-      titulo: "Your Name (Kimi no Na wa)",
-      img: "../images/yourname.jpg",
-      descripcion: "Una historia de dos adolescentes que intercambian cuerpos y buscan encontrarse en un mundo separado por el tiempo.",
-      reparto: ["Ryunosuke Kamiki", "Mone Kamishiraishi"],
-      duracion: "106 minutos",
-      genero: ["Romance", "Fantasía", "Drama"],
-      fecha_lanzamiento: "2016-08-26"
-    },
-    {
-      id: 2,
-      titulo: "A Silent Voice (Koe no Katachi)",
-      img: "../images/unavozsilenciosa.jpg",
-      descripcion: "Un joven busca redimirse tras haber acosado a una compañera con discapacidad auditiva en el pasado.",
-      reparto: ["Miyu Irino", "Saori Hayami"],
-      duracion: "130 minutos",
-      genero: ["Drama", "Romance"],
-      fecha_lanzamiento: "2016-09-17"
-    },
-    {
-      id: 3,
-      titulo: "El Viaje de Chihiro (Spirited Away)",
-      img: "../images/elviajedechihiro.jpg",
-      descripcion: "Chihiro, una niña de 10 años, se adentra en un mundo mágico lleno de espíritus mientras intenta salvar a sus padres.",
-      reparto: ["Rumi Hiiragi", "Miyu Irino", "Mari Natsuki"],
-      duracion: "125 minutos",
-      genero: ["Fantasía", "Aventura"],
-      fecha_lanzamiento: "2001-07-20"
-    },
-    {
-      id: 4,
-      titulo: "La Princesa Mononoke (Princess Mononoke)",
-      imagen_url: "https://tse1.mm.bing.net/th?id=OIP.eq9VVvTIQtyIp2okOOCZZQHaLH&pid=Api",
-      descripcion: "Un joven príncipe queda atrapado en la lucha entre los humanos y los dioses guardianes de un bosque.",
-      reparto: ["Yoji Matsuda", "Yuriko Ishida"],
-      duracion: "134 minutos",
-      genero: ["Fantasía", "Aventura"],
-      fecha_lanzamiento: "1997-07-12"
-    },
-    {
-      id: 5,
-      titulo: "Kimetsu no Yaiba: El Tren Infinito (Demon Slayer: Mugen Train)",
-      imagen_url: "images/yourname.jpg",
-      descripcion: "Tanjiro y sus amigos se embarcan en una misión dentro de un tren donde enfrentan a un demonio poderoso.",
-      reparto: ["Natsuki Hanae", "Akari Kito", "Yoshitsugu Matsuoka"],
-      duracion: "117 minutos",
-      genero: ["Acción", "Fantasía"],
-      fecha_lanzamiento: "2020-10-16"
-    },
-    {
-      id: 6,
-      titulo: "Attack on Titan: The Final Season",
-      imagen_url: "https://tse1.mm.bing.net/th?id=OIP.Xozpc2CrVZRPuyWAuVX79wHaEK&pid=Api",
-      descripcion: "La lucha entre la humanidad y los titanes alcanza su punto culminante en la última temporada.",
-      reparto: ["Yuki Kaji", "Marina Inoue"],
-      duracion: "24 minutos por episodio",
-      genero: ["Acción", "Aventura", "Drama"],
-      fecha_lanzamiento: "2020-12-07"
-    },
-    {
-      id: 7,
-      titulo: "My Hero Academia: Two Heroes",
-      imagen_url: "https://tse3.mm.bing.net/th?id=OIP.YkyJclHlnRaeMmZgD9q5sQHaLH&pid=Api",
-      descripcion: "Izuku Midoriya y sus amigos luchan contra un grupo de villanos en un evento especial que desafiará su heroísmo.",
-      reparto: ["Daiki Yamashita", "Kenta Miyake"],
-      duracion: "96 minutos",
-      genero: ["Acción", "Superhéroes"],
-      fecha_lanzamiento: "2018-08-03"
-    },
-    {
-      id: 8,
-      titulo: "The Garden of Words",
-      imagen_url: "https://tse3.mm.bing.net/th?id=OIP.HXTvS1ECxPOlQSt1p9LO8AHaK_&pid=Api",
-      descripcion: "Un joven y una mujer se encuentran en un jardín durante la temporada de lluvias y comienzan a formar un lazo inesperado.",
-      reparto: ["Miyu Irino", "Kana Hanazawa"],
-      duracion: "46 minutos",
-      genero: ["Romance", "Drama"],
-      fecha_lanzamiento: "2013-05-31"
-    },
-    {
-      id: 9,
-      titulo: "Weathering With You",
-      imagen_url: "https://tse3.mm.bing.net/th?id=OIP.Md9TAXSg9ybQrx9hw3ptzQHaL8&pid=Api",
-      descripcion: "Un chico y una chica descubren que ella tiene la capacidad de manipular el clima, lo que cambiará sus vidas.",
-      reparto: ["Kotaro Daigo", "Nijiro Murakami"],
-      duracion: "112 minutos",
-      genero: ["Romance", "Fantasía", "Drama"],
-      fecha_lanzamiento: "2019-07-19"
-    },
-    {
-      id: 10,
-      titulo: "Perfect Blue",
-      imagen_url: "https://tse4.mm.bing.net/th?id=OIP.oxGV1B-fWzX9xz9VZtvm6AHaLs&pid=Api",
-      descripcion: "Una joven cantante pop se ve atrapada en una espiral de paranoia y terror cuando empieza a perder la distinción entre realidad y fantasía.",
-      reparto: ["Junko Iwao", "Rika Fukami"],
-      duracion: "81 minutos",
-      genero: ["Psicológico", "Thriller", "Misterio"],
-      fecha_lanzamiento: "1997-02-28"
-    },
-    {
-      id: 11,
-      titulo: "Akira",
-      imagen_url: "https://tse4.mm.bing.net/th?id=OIP.K-D2pKbE6lxTbdQrd5nq_gHaKe&pid=Api",
-      descripcion: "En un Tokio post-apocalíptico, un joven con poderes psíquicos desata el caos mientras su amigo intenta detenerlo.",
-      reparto: ["Mitsuo Iwata", "Nozomu Sasaki"],
-      duracion: "124 minutos",
-      genero: ["Ciencia ficción", "Acción", "Distopía"],
-      fecha_lanzamiento: "1988-07-16"
-    },
-    {
-      id: 12,
-      titulo: "Howl's Moving Castle",
-      imagen_url: "https://tse1.mm.bing.net/th?id=OIP.XGHW2yCG2EodwNFGRu4bRgHaLH&pid=Api",
-      descripcion: "Una joven es transformada en una anciana por una maldición y busca la ayuda de un mago excéntrico y su castillo ambulante.",
-      reparto: ["Chieko Baishō", "Takuya Kimura"],
-      duracion: "119 minutos",
-      genero: ["Fantasía", "Aventura"],
-      fecha_lanzamiento: "2004-11-20"
-    },
-    {
-      id: 13,
-      titulo: "Nausicaä of the Valley of the Wind",
-      imagen_url: "https://tse3.mm.bing.net/th?id=OIP.0KHiM_Dw2p9I4pQ5GZPMAAHaLH&pid=Api",
-      descripcion: "En un mundo post-apocalíptico, una princesa lucha por salvar la humanidad mientras enfrenta las fuerzas de la naturaleza.",
-      reparto: ["Sumi Shimamoto", "Goro Naya"],
-      duracion: "116 minutos",
-      genero: ["Fantasía", "Aventura", "Acción"],
-      fecha_lanzamiento: "1984-03-11"
-    },
-    {
-      id: 14,
-      titulo: "Ponyo",
-      imagen_url: "https://tse1.mm.bing.net/th?id=OIP.ZdUVzTxjYJxjKbk8S5ugrgHaLH&pid=Api",
-      descripcion: "Un niño y una criatura mágica en forma de pez se embarcan en una aventura para salvar el océano.",
-      reparto: ["Noah Cyrus", "Frankie Jonas"],
-      duracion: "101 minutos",
-      genero: ["Fantasía", "Aventura", "Niños"],
-      fecha_lanzamiento: "2008-07-19"
-    },
-    {
-      id: 15,
-      titulo: "Made in Abyss",
-      imagen_url: "https://tse2.mm.bing.net/th?id=OIP.1VZ8V4gLv11ffh0D-HgEdAHaKP&pid=Api",
-      descripcion: "Un grupo de exploradores se aventura en un misterioso abismo donde descubren secretos oscuros y criaturas extrañas.",
-      reparto: ["Miyu Tomita", "Eri Kitamura"],
-      duracion: "24 minutos por episodio",
-      genero: ["Aventura", "Fantasía", "Misterio"],
-      fecha_lanzamiento: "2017-07-07"
-    },
-    {
-      id: 16,
-      titulo: "Neon Genesis Evangelion: The End of Evangelion",
-      imagen_url: "https://tse1.mm.bing.net/th?id=OIP.z7zWs23K14V_LlNoY_U8VgHaLH&pid=Api",
-      descripcion: "La conclusión de la famosa serie sobre ángeles, robots gigantes y las luchas psicológicas de los adolescentes que los manejan.",
-      reparto: ["Megumi Ogata", "Yuko Miyamura"],
-      duracion: "87 minutos",
-      genero: ["Mecha", "Psicológico", "Drama"],
-      fecha_lanzamiento: "1997-07-19"
-    },
-    {
-      id: 17,
-      titulo: "Ghost in the Shell",
-      imagen_url: "https://tse3.mm.bing.net/th?id=OIP.xhzAF2lWj_6eORc3lpsugAHaJl&pid=Api",
-      descripcion: "Una cyborg de la policía investiga un hacker que ha infiltrado el sistema de inteligencia artificial de su ciudad.",
-      reparto: ["Atsuko Tanaka", "Iemasa Kayumi"],
-      duracion: "83 minutos",
-      genero: ["Ciencia ficción", "Thriller", "Acción"],
-      fecha_lanzamiento: "1995-11-18"
-    },
-    {
-      id: 18,
-      titulo: "Cowboy Bebop: The Movie",
-      imagen_url: "https://tse4.mm.bing.net/th?id=OIP.8Fn0V6ybYzZvV8rVhks5aAHaHa&pid=Api",
-      descripcion: "Spike Spiegel y su equipo de cazarrecompensas deben detener a un terrorista que planea un ataque químico en una ciudad.",
-      reparto: ["Kouichi Yamadera", "Megumi Hayashibara"],
-      duracion: "115 minutos",
-      genero: ["Ciencia ficción", "Acción", "Policíaco"],
-      fecha_lanzamiento: "2001-09-01"
-    },
-    {
-      id: 19,
-      titulo: "Paprika",
-      imagen_url: "https://tse3.mm.bing.net/th?id=OIP.XflIjdQQF2FpewJro6rJggHaKg&pid=Api",
-      descripcion: "Una terapeuta utiliza una máquina para entrar en los sueños de los pacientes y ayudarlos a superar sus traumas.",
-      reparto: ["Megumi Hayashibara", "Toru Emori"],
-      duracion: "90 minutos",
-      genero: ["Ciencia ficción", "Psicológico", "Misterio"],
-      fecha_lanzamiento: "2006-11-25"
-    },
-    {
-      id: 20,
-      titulo: "Steins;Gate",
-      imagen_url: "https://tse3.mm.bing.net/th?id=OIP.NR5_VzLBaeiNBKfzZgLQwgHaL8&pid=Api",
-      descripcion: "Un grupo de amigos desarrolla una máquina para enviar mensajes al pasado, lo que desencadena una serie de eventos catastróficos.",
-      reparto: ["Mamoru Miyano", "Asami Imai"],
-      duracion: "24 minutos por episodio",
-      genero: ["Ciencia ficción", "Thriller", "Drama"],
-      fecha_lanzamiento: "2011-04-06"
-    }
-  ];
+  {
+    id: 1,
+    titulo: "Your Name (Kimi no Na wa)",
+    img: "../images/1.jpg",
+    descripcion: "Una historia de dos adolescentes que intercambian cuerpos y buscan encontrarse en un mundo separado por el tiempo.",
+    reparto: [
+      "Ryunosuke Kamiki (voz de Taki Tachibana)",
+      "Mone Kamishiraishi (voz de Mitsuha Miyamizu)"
+    ],
+    duracion: "106 minutos",
+    genero: ["Romance", "Fantasía", "Drama"],
+    fecha_lanzamiento: "2016-08-26"
+  },
+  {
+    id: 2,
+    titulo: "A Silent Voice (Koe no Katachi)",
+    img: "../images/2.jpg",
+    descripcion: "Un joven busca redimirse tras haber acosado a una compañera con discapacidad auditiva en el pasado.",
+    reparto: [
+      "Miyu Irino (voz de Shoya Ishida)",
+      "Saori Hayami (voz de Shoko Nishimiya)"
+    ],
+    duracion: "130 minutos",
+    genero: ["Drama", "Romance"],
+    fecha_lanzamiento: "2016-09-17"
+  },
+  {
+    id: 3,
+    titulo: "El Viaje de Chihiro (Spirited Away)",
+    img: "../images/3.jpg",
+    descripcion: "Chihiro, una niña de 10 años, se adentra en un mundo mágico lleno de espíritus mientras intenta salvar a sus padres.",
+    reparto: [
+      "Rumi Hiiragi (voz de Chihiro)",
+      "Miyu Irino (voz de Haku)",
+      "Mari Natsuki (voz de Yubaba)"
+    ],
+    duracion: "125 minutos",
+    genero: ["Fantasía", "Aventura"],
+    fecha_lanzamiento: "2001-07-20"
+  },
+  {
+    id: 4,
+    titulo: "La Princesa Mononoke (Princess Mononoke)",
+    img: "../images/4.jpg",
+    descripcion: "Un joven príncipe queda atrapado en la lucha entre los humanos y los dioses guardianes de un bosque.",
+    reparto: [
+      "Yoji Matsuda (voz de Ashitaka)",
+      "Yuriko Ishida (voz de San)"
+    ],
+    duracion: "134 minutos",
+    genero: ["Fantasía", "Aventura"],
+    fecha_lanzamiento: "1997-07-12"
+  },
+  {
+    id: 5,
+    titulo: "Kimetsu no Yaiba: El Tren Infinito (Demon Slayer: Mugen Train)",
+    img: "../images/5.jpg",
+    descripcion: "Tanjiro y sus amigos se embarcan en una misión dentro de un tren donde enfrentan a un demonio poderoso.",
+    reparto: [
+      "Natsuki Hanae (voz de Tanjiro Kamado)",
+      "Akari Kito (voz de Nezuko Kamado)",
+      "Yoshitsugu Matsuoka (voz de Zenitsu Agatsuma)"
+    ],
+    duracion: "117 minutos",
+    genero: ["Acción", "Fantasía"],
+    fecha_lanzamiento: "2020-10-16"
+  },
+  {
+    id: 6,
+    titulo: "Attack on Titan: The Final Season",
+    img: "../images/6.jpg",
+    descripcion: "La lucha entre la humanidad y los titanes alcanza su punto culminante en la última temporada.",
+    reparto: [
+      "Yuki Kaji (voz de Eren Yeager)",
+      "Marina Inoue (voz de Armin Arlert)"
+    ],
+    duracion: "24 minutos por episodio",
+    genero: ["Acción", "Aventura", "Drama"],
+    fecha_lanzamiento: "2020-12-07"
+  },
+  {
+    id: 7,
+    titulo: "My Hero Academia: Two Heroes",
+    img: "../images/7.jpg",
+    descripcion: "Izuku Midoriya y sus amigos luchan contra un grupo de villanos en un evento especial que desafiará su heroísmo.",
+    reparto: [
+      "Daiki Yamashita (voz de Izuku Midoriya)",
+      "Kenta Miyake (voz de All Might)"
+    ],
+    duracion: "96 minutos",
+    genero: ["Acción", "Superhéroes"],
+    fecha_lanzamiento: "2018-08-03"
+  },
+  {
+    id: 8,
+    titulo: "Violet Evergarden",
+    img: "../images/8.jpg",
+    descripcion: "Violet Evergarden, una exsoldado, comienza una nueva vida como 'Auto Memories Doll', escribiendo cartas para las personas que necesitan expresar sus emociones. A través de sus cartas, intenta comprender lo que significa el amor y las profundas conexiones humanas.",
+    reparto: [
+      "Daisuke Kikuta (voz de Claudia Hodgins)",
+      "Yui Ishikawa (voz de Violet Evergarden)",
+      "Takehito Koyasu (voz de Gilbert Bougainvillea)"
+    ],
+    duracion: "140 minutos",
+    genero: ["Drama", "Fantasía", "Romance"],
+    fecha_lanzamiento: "2020-09-18"
+  },
+  {
+    id: 9,
+    titulo: "Jujutsu Kaisen 0",
+    img: "../images/9.jpg",
+    descripcion: "Yuta Okkotsu, un joven atormentado por la maldición de su amiga Rika, se une a la Escuela de Magia Jujutsu para aprender a controlar sus habilidades. Junto a otros hechiceros, enfrentará poderosas maldiciones en una batalla por la supervivencia.",
+    reparto: [
+      "Junya Enoki (voz de Yuta Okkotsu)",
+      "Kana Hanazawa (voz de Rika Orimoto)",
+      "Takahiro Sakurai (voz de Satoru Gojo)"
+    ],
+    duracion: "105 minutos",
+    genero: ["Acción", "Sobrenatural", "Oscuro", "Aventura"],
+    fecha_lanzamiento: "2021-12-24"
+  },
+  {
+    id: 10,
+    titulo: "I Want to Eat Your Pancreas",
+    img: "../images/10.jpg",
+    descripcion: "Un joven estudiante encuentra el diario de una compañera de clase, quien padece una enfermedad terminal. A medida que se va conociendo, ambos comienzan a formar un vínculo profundo mientras ella enfrenta su destino con valentía.",
+    reparto: [
+      "Mahiro Takasugi (voz de Haruki Shiga)",
+      "Lynn (voz de Sakura Yamauchi)"
+    ],
+    duracion: "108 minutos",
+    genero: ["Drama", "Romance"],
+    fecha_lanzamiento: "2018-09-01"
+  },
+  {
+    id: 11,
+    titulo: "Sword Art Online: Ordinal Scale",
+    img: "../images/11.jpg",
+    descripcion: "Después de los eventos de Aincrad y Alfheim, los jugadores de Sword Art Online se adentran en un nuevo juego de realidad aumentada llamado Ordinal Scale. Sin embargo, descubren que este juego tiene oscuros secretos que amenazan sus vidas.",
+    reparto: [
+      "Yoshitsugu Matsuoka (voz de Kirito)",
+      "Haruka Tomatsu (voz de Asuna)",
+      "Ayana Taketatsu (voz de Silica)"
+    ],
+    duracion: "119 minutos",
+    genero: ["Acción", "Aventura", "Ciencia Ficción", "Anime"],
+    fecha_lanzamiento: "2017-02-18"
+  },
+  {
+    id: 12,
+    titulo: "Howl's Moving Castle",
+    img: "../images/12.jpg",
+    descripcion: "Una joven es transformada en una anciana por una maldición y busca la ayuda de un mago excéntrico y su castillo ambulante.",
+    reparto: [
+      "Chieko Baishō (voz de Sophie)",
+      "Takuya Kimura (voz de Howl)"
+    ],
+    duracion: "119 minutos",
+    genero: ["Fantasía", "Aventura"],
+    fecha_lanzamiento: "2004-11-20"
+  },
+  {
+    id: 13,
+    titulo: "Solo Leveling: Segundo Despertar",
+    img: "../images/13.jpg",
+    descripcion: "Tras una serie de batallas épicas, Sung Jinwoo, el cazador más débil del mundo, experimenta una nueva etapa de poder. En este 'Segundo Despertar', sus habilidades se intensifican, permitiéndole enfrentarse a enemigos aún más peligrosos. Ahora, Jinwoo debe proteger su mundo y descubrir el origen de sus poderes mientras lidia con amenazas sobrenaturales que superan todo lo que ha enfrentado antes.",
+    reparto: [
+      "ban taito(voz de Jinwoo )", 
+      "Reina Ueda(voz de Hae-In Cha)",
+      "Nakamura(voz de Jin-Ho yoo)" ,
+    ],
+    duracion: "120 minutos",
+    genero: ["Acción", "Aventura", "Fantasia", "Superpoderes", "Sobrenatural"],
+    fecha_lanzamiento: "2024-12-05"
+  },
+  {
+    id: 14,
+    titulo: "Ponyo",
+    img: "../images/14.jpg",
+    descripcion: "Un niño y una criatura mágica en forma de pez se embarcan en una aventura para salvar el océano.",
+    reparto: [
+      "Noah Cyrus (voz de Ponyo)",
+      "Frankie Jonas (voz de Sosuke)"
+    ],
+    duracion: "101 minutos",
+    genero: ["Fantasía", "Aventura", "Niños"],
+    fecha_lanzamiento: "2008-07-19"
+  },
+  {
+    id: 15,
+    titulo: "5 Centimeters Per Second",
+    img: "../images/15.jpg",
+    descripcion: "Un relato de amor y distancia, '5 Centimeters Per Second' sigue la historia de Takaki Tōno y Akari Shinohara, dos amigos que se enamoran pero se ven separados por la distancia y el paso del tiempo.",
+    reparto: [
+      "Kenji Mizuhashi (voz de Takaki Tōno)",
+      "Yoshimi Iwasaki (voz de Akari Shinohara)",
+      "Satomi Hanamura (voz de Kanae Sumita)"
+    ],
+    duracion: "63 minutos",
+    genero: ["Romance", "Drama", "Slice of Life"],
+    fecha_lanzamiento: "2007-03-03"
+  },
+  {
+    id: 16,
+    titulo: "Neon Genesis Evangelion: The End of Evangelion",
+    img: "../images/16.jpg",
+    descripcion: "La conclusión de la famosa serie sobre ángeles, robots gigantes y las luchas psicológicas de los adolescentes que los manejan.",
+    reparto: [
+      "Megumi Ogata (voz de Shinji Ikari)",
+      "Yuko Miyamura (voz de Rei Ayanami)"
+    ],
+    duracion: "87 minutos",
+    genero: ["Mecha", "Psicológico", "Drama"],
+    fecha_lanzamiento: "1997-07-19"
+  },
+  {
+    id: 17,
+    titulo: "One Piece Film: Red",
+    img: "../images/17.jpg",
+    descripcion: "Luffy y su tripulación se enfrentan a una nueva amenaza cuando se encuentran con Uta, la hija del legendario cantante Shanks.",
+    reparto: [
+      "Monkey D. Luffy (voz de Mayumi Tanaka)",
+      "Roronoa Zoro (voz de Kazuya Nakai)",
+      "Nami (voz de Akemi Okamura)"
+    ],
+    duracion: "115 minutos",
+    genero: ["Aventura", "Acción", "Fantasía", "Música", "Animación"],
+    fecha_lanzamiento: "2022-08-06"
+  },
+  {
+    id: 18,
+    titulo: "Belle",
+    img: "../images/18.jpg",
+    descripcion: "La historia sigue a Suzu, una joven tímida que vive en una pequeña aldea en Japón, quien toma la forma de Belle en un mundo virtual.",
+    reparto: [
+      "Kaho Nakamura (voz de Suzu/Belle)",
+      "Takeru Satoh (voz de Shinobu)",
+      "Lilas Ikeda (voz de Ruka)",
+      "Tsubasa Honda (voz de Kamishin)",
+      "Shota Sometani (voz de The Dragon)"
+    ],
+    duracion: "121 minutos",
+    genero: ["Animación", "Aventura", "Fantasía", "Drama", "Musical"],
+    fecha_lanzamiento: "2021-07-16"
+  },
+  {
+    id: 19,
+    titulo: "One Punch Man: Road to Hero",
+    img: "../images/19.jpg",
+    descripcion: "Un resumen de los eventos que llevaron a Saitama a convertirse en el héroe más fuerte del mundo.",
+    reparto: [
+      "Makoto Furukawa (voz de Saitama)",
+      "Kaito Ishikawa (voz de Genos)",
+      "Yōji Ueda (voz de Mumen Rider)",
+      "Hiroki Yasumoto (voz de Speed-o'-Sound Sonic)"
+    ],
+    duracion: "60 minutos",
+    genero: ["Acción", "Comedia", "Superhéroes"],
+    fecha_lanzamiento: "2015-12-12"
+  },
+  {
+    id: 20,
+    titulo: "Dragon Ball Super: Broly",
+    img: "../images/20.jpg",
+    descripcion: "Goku y Vegeta se enfrentan a un guerrero legendario, Broly.",
+    reparto: [
+      "Masako Nozawa (voz de Goku)",
+      "Ryo Horikawa (voz de Vegeta)",
+      "Bin Shimada (voz de Broly)"
+    ],
+    duracion: "101 minutos",
+    genero: ["Acción", "Aventura", "Anime", "Pelea"],
+    fecha_lanzamiento: "2018-12-14"
+  }
+];
+
   
 
 let card = document.getElementById("camPelis");
 
 peliculas.filter((x) => {
-    card.innerHTML += `
+    card.innerHTML += /*html*/ `
       <div class="card" style="width: 18rem;" id="camPelis">
         <img src="${x.img}" class="card-img-top" alt="${x.titulo}">
         <div class="card-body">
