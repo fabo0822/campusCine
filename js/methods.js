@@ -25,7 +25,7 @@ export function cardCreate(films, container) {
       <p class = "description__card">${synopsis}</p>
     </div>
     <div class = "button__container">
-      <button class="button__card" data-name="${title}">Ver más</button>
+      <button class="button__card" data-name="${title}">Ver mas</button>
     </div>
     `;
 
@@ -38,6 +38,12 @@ export function cardCreate(films, container) {
 // Función para buscar una película y mostrar los resultados
 export function searchFilm(films, query) {
   return new Promise((resolve, reject) => {
+    if (query === '') {
+      // Si el buscador está vacío, devuelve todas las películas por defecto
+      resolve(films);
+      return;}
+   
+   
     if (!query) {
       reject('Ingresa la película a buscar');
       return;
@@ -48,7 +54,7 @@ export function searchFilm(films, query) {
     );
 
     if (filteredFilms.length === 0) {
-      reject(`Lo sentimos, no tenemos disponible la película "${query}" en este momento`);
+      reject(`La pelicula "${query}" no existe en la base de datos`);
       return;
     }
 
@@ -58,7 +64,7 @@ export function searchFilm(films, query) {
 
 
 export function popupCreate(film, container) {
-  const [{title, image, synopsis, length, genre, cast, dateLaunch}] = film;
+  const [{title, image, synopsis, description, length, genre, cast, dateLaunch}] = film;
 
   // Crear el contenedor del popup
   const popup = document.createElement("div");
@@ -79,6 +85,7 @@ export function popupCreate(film, container) {
     <p class = "popup__element--duration"><span class="bold">Duración:</span> ${length}</p>
     <p class = "popup__element--genre"><span class="bold">Género:</span> ${genre}</p>
     <p class = "popup__element--datelaunch"><span class="bold">Fecha De Lanzamiento:</span> ${dateLaunch}</p>
+    <p class = "popup__element--description"><span class="bold">descripcion:</span>${description}</p>
   </div>
   <div class="popup__info--left">
     <p class = "popup__element--cast"><span class="bold">Cast:</span> ${cast}</p>
